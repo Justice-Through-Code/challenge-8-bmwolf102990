@@ -20,7 +20,7 @@ print('-----------------------')
 # 1.3 TODO: Create a function named 'check_out' that removes a book from the books list
 # Parameters: book_title (string)
 # Return: Not needed for this function
-def check_out(book_title):
+def check_out(book_title: str):
     books.remove(book_title)
 
 # 1.4 TODO: Check out 'SAPIENS' using the check_out function
@@ -33,7 +33,7 @@ print('-----------------------')
 # 1.6 TODO: Create a function 'check_in' that adds a book to the end of the books list
 # Parameters: book_title (string)
 # Return: Not needed for this function
-def check_in(book_title):
+def check_in(book_title: str):
     books.append(book_title)
 
 # 1.7 TODO: Check in 'SAPIENS' using the check_in function
@@ -46,7 +46,7 @@ print('-----------------------')
 # 1.9 TODO: Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book_title (string)
 # Return: Not needed for this function
-def search_by_name(book_title):
+def search_by_name(book_title: str):
     if book_title in books:
         print('Available')
     else:
@@ -139,7 +139,7 @@ books_with_details = [
 # Parameters: Not needed for this function
 # Return: number of books (integer)
 def count_books():
-    print(len(books_with_details))
+    print(int(len(books_with_details)))
     return int(len(books_with_details))
 
 # 2.2 TODO: Check the number of books available in the books list using the `count_books` function
@@ -150,7 +150,7 @@ count_books()
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, and .append() for this solution!
-def search_by_author(author):
+def search_by_author(author: str):
     found_books = []
     for book in books_with_details:
         if book['author'] == author:
