@@ -133,18 +133,19 @@ books_with_details = [
 # 2.0 TODO: In a comment, describe the structure of the data in books_with_details.
 # What types of data are nested within others? How do you know?
 
-#  "books_with_details" itself is a variable that is assigned to a list. I know this because the square brackets on the rigth-hand side of the single equal sign (assignment operator) are a defining feature of lists. Within the list, each inidividual element is a dictionary. I know this because of the curly brackets (a.k.a. "braces") that are at the beginning and end of each element in the list. Within each dictionary element,  there are 3 keys ("title", "author" and "description") and the data type of each of the values assigned to each key is a string. I know this because of the single quotes which define the data as a string.
+'''
+"books_with_details" itself is a variable that is assigned to a list. I know this because the square brackets on the rigth-hand side of the single equal sign (assignment operator) are a defining feature of lists. Within the list, each inidividual element is a dictionary. I know this because of the curly brackets (a.k.a. "braces") that are at the beginning and end of each element in the list. Within each dictionary element,  there are 3 keys ("title", "author" and "description") and the data type of each of the values assigned to each key is a string. I know this because of the single quotes which define the data as a string.
+'''
 
 # 2.1 TODO: Create a function called 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
 def count_books():
-    print(int(len(books_with_details)))
     return int(len(books_with_details))
 
 # 2.2 TODO: Check the number of books available in the books list using the `count_books` function
 # HINT: Does `return` print anything out?
-count_books()
+print(count_books())
 
 # 2.3 TODO: Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
@@ -154,10 +155,9 @@ def search_by_author(author: str):
     found_books = []
     for book in books_with_details:
         if book['author'] == author:
-            found_books.append(book['title'])
-    print(found_books)        
+            found_books.append(book['title'])       
     return found_books
 
 # 2.4 TODO: Search for book titles by the author 'Yuval Noah Harari' using the search_by_author function
 # HINT: Remember again-- return doesn't print anything out. How can we print the output of the function?
-search_by_author('Yuval Noah Harari')
+print(search_by_author('Yuval Noah Harari'))
